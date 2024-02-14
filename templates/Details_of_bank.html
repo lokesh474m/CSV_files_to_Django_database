@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank_details</title>
+</head>
+<body>
+    <center>
+        <h1>BANKS DETAILS</h1>
+        <table border="2px" cellpadding="5px" cellspacing="0px">
+            <tr>
+                <th>Bank Names</th>
+                <th>IFSC COde</th>
+                <th>Branch Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>City</th>
+                <th>District</th>
+                <th>State</th>
+            </tr>
+            {% for b in BRO %}
+                <tr>
+                    <td>{{b.bank_name}}</td>
+                    <td>{{b.ifsc}}</td>
+                    <td>{{b.branch}}</td>
+                    <td>{{b.address}}</td>
+                    <td>{{b.contact}}</td>
+                    <td>{{b.district}}</td>
+                    <td>{{b.city}}</td>
+                    <td>{{b.state}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
